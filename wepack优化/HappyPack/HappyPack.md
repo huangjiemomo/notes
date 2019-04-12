@@ -52,7 +52,7 @@ module.exports = [
 
 ***
 
-####参数
+###参数
 * id: String 用唯一的标识符 id 来代表当前的 HappyPack 是用来处理一类特定的文件.
 
 * loaders: Array 用法和 webpack Loader 配置中一样.
