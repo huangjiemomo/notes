@@ -2,11 +2,11 @@
 
 >作用：我们需要Webpack 能同一时间处理多个任务，发挥多核 CPU 电脑的威力，HappyPack 就能让 Webpack 做到这点，它把任务分解给多个子进程去并发的执行，子进程处理完后再把结果发送给主进程。（提示：由于HappyPack 对file-loader、url-loader 支持的不友好，所以不建议对该loader使用。）
 
-####安装
+**安装**
 ```
 npm install --save-dev happypack
 ```
-####使用
+**使用**
 ```
 const os = require('os'),
   HappyPack = require('happypack'),
@@ -51,7 +51,7 @@ module.exports = [
 * 在 Plugin 配置中，新增了两个 HappyPack 实例分别用于告诉 happypack/loader 去如何处理 .js 和 .vue 文件。选项中的 id 属性的值和上面 querystring 中的 ?id=babel 相对应，选项中的 loaders 属性和 Loader 配置中一样。
 
 ***
-####参数
+**参数**
 * id: String 用唯一的标识符 id 来代表当前的 HappyPack 是用来处理一类特定的文件.
 
 * loaders: Array 用法和 webpack Loader 配置中一样.
